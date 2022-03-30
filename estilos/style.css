@@ -1,0 +1,663 @@
+* {
+    /* Reseteo */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #363434;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+:root {
+    /* Constantes de colores*/
+    --gris: #505160;
+    --grisOscuro: rgb(37, 36, 36);
+    --grisTransparente: rgba(37, 36, 36, 0.8);
+    --azulMarino: #68829E;
+    --verdeClaro: #AEBD38;
+    --verdeOscuro: #598234;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+
+.sombraOscura {
+    -webkit-box-shadow: 0px 13px 14px 9px rgba(0, 0, 0, 0.95);
+    -moz-box-shadow: 0px 13px 14px 9px rgba(0, 0, 0, 0.95);
+    box-shadow: 0px 13px 14px 9px rgba(0, 0, 0, 0.95);
+}
+
+.sombraClara {
+    -webkit-box-shadow: 0px 6px 11px 4px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: 0px 6px 11px 4px rgba(0, 0, 0, 0.47);
+    box-shadow: 0px 6px 11px 4px rgba(0, 0, 0, 0.47);
+}
+
+.logo {
+    width: 7rem;
+}
+
+.logo-footer {
+    width: 7rem
+}
+
+#index {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        "main"
+        "footer";
+    min-height: 100vh;
+}
+
+.cuerpo {
+    grid-area: main;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/imagenes/paraweb.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 65% 30%;
+    min-height: 100%;
+    min-width: 100%;
+    grid-template-areas:
+        "navegacion"
+        "."
+        "logo"
+        ".";
+}
+
+.navegacion-index {
+    grid-area: navegacion;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+    background-color: var(--grisTransparente);
+}
+
+.navegacion-index li {
+    list-style-type: none;
+    position: relative;
+    width: 25rem;
+    text-align: center;
+
+}
+
+.navegacion-index a {
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1rem;
+}
+
+.navegacion-index a:hover {
+    color: var(--negro);
+}
+
+.sub-menu {
+    background-color: var(--grisTransparente);
+    position: absolute;
+    width: 120%;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    margin-top: 2rem;
+
+}
+
+.sub-menu li a {
+    display: block;
+    padding: 1.5rem;
+}
+
+.navegacion-index li:hover .sub-menu {
+    visibility: visible;
+
+}
+
+.contenido-index {
+    grid-area: logo;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-index h1 {
+    font-size: 5rem;
+    width: 38rem;
+    text-transform: uppercase;
+    color: var(--blanco);
+}
+
+.contenido-index img {
+    width: 20rem;
+    padding: 1rem;
+}
+
+.footer-grid {
+    grid-area: footer;
+}
+
+.pie-pagina {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--grisOscuro);
+    height: 10rem;
+}
+
+.iconos-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parrafo-footer {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 1rem;
+    color: var(--blanco);
+}
+
+@media screen and (max-width: 1024px) {
+    .navegacion-index {
+        gap: 7rem;
+    }
+
+    .pie-pagina {
+        justify-content: center;
+        gap: 7rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navegacion-index {
+        gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 630px) {
+
+    .cuerpo {
+        grid-template-rows: 30% 50% 25%;
+    }
+
+    .navegacion-index {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .navegacion-index a {
+        font-size: 2.5;
+    }
+
+
+    .contenido-index img {
+        width: 15rem;
+    }
+
+    .contenido-index h1 {
+        font-size: 3.4rem;
+    }
+
+    .pie-pagina {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        height: 35rem;
+        padding: 1.5rem;
+    }
+
+    .iconos-footer {
+        flex-direction: column;
+    }
+
+    .parrafo-footer {
+        font-size: 2rem;
+    }
+
+    .logo-footer {
+        width: 15rem;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .cuerpo {
+        grid-template-rows: 25% 40% 25%
+    }
+
+    .contenido-index {
+        margin: 2rem;
+    }
+
+    .contenido-index img {
+        width: 9rem;
+    }
+
+    .contenido-index h1 {
+        width: 20rem;
+        font-size: 2.5rem;
+    }
+
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*INICIO*/
+
+#inicio {
+    display: grid;
+    grid-template-rows: 30% auto 15%;
+    grid-template-areas:
+        "encabezado"
+        "cuerpo"
+        "footer";
+    gap: 5rem;
+    min-width: 100vh;
+}
+
+.encabezado-inicio {
+    grid-area: encabezado;
+    background-image: url(/imagenes/Casa.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 75% auto;
+    grid-template-areas:
+        "."
+        "titulo";
+}
+
+.cuerpo-inicio {
+    grid-area: cuerpo;
+}
+
+.texto-imagen {
+    grid-area: titulo;
+    background-color: var(--grisTransparente);
+    position: relative;
+}
+
+.texto-imagen h1 {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--blanco);
+}
+
+.texto-imagen p {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--blanco);
+    margin-top: 1rem;
+}
+
+.subtitulo {
+    margin-top: 5rem;
+    color: var(--azulMarino);
+    font-size: 5rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+}
+
+.proceso-trabajo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-bottom: 10rem;
+
+}
+
+.proceso-trabajo .articulo {
+    background-color: var(--azulMarino);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22%;
+    height: 50rem;
+    border-radius: 2rem;
+}
+
+.articulo img {
+    width: 100%;
+    height: 80rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.articulo h4 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--negro);
+    text-transform: uppercase;
+}
+
+.articulo p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--negro);
+}
+
+.seccion-unico {
+    margin-top: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blanco);
+    width: 100%;
+    height: 60rem;
+    margin-bottom: 15rem;
+}
+
+.seccion-unico img {
+    margin-left: 7rem;
+    width: 45%;
+    height: 100%;
+}
+
+.seccion-unico h2 {
+    color: var(--verdeClaro);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 8rem;
+    font-family: 'Mali';
+    font-weight: 500;
+    margin-right: 15%;
+    width: 20%;
+}
+
+.seccion-unico span {
+    font-weight: 700;
+}
+
+.recuadro-horizontal {
+    margin-top: 25rem;
+    background-color: var(--blanco);
+    height: 50rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20rem;
+}
+
+.recuadro-horizontal h2 {
+    font-size: 7rem;
+    color: var(--azulMarino);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.recuadro-horizontal p {
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.footer-inicio {
+    grid-area: footer;
+}
+
+
+
+/* NO VA EN EL DESAFIO 3 EL INICIO*/
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*INTERIORES / EXTERIOR*/
+
+#interiores {
+    display: grid;
+    grid-template-rows: 110% 10%;
+    grid-template-areas:
+        "cuerpo"
+        "footer";
+    min-width: 100vh;
+    gap: 10rem;
+}
+
+.cuerpo-galeria {
+    grid-area: cuerpo;
+    display: grid;
+    grid-template-rows: 10% 5% auto;
+    grid-template-areas:
+        "encabezado"
+        "titulo"
+        "imagenes";
+    gap: 3em;
+}
+
+.encabezado-galeria {
+    grid-area: encabezado;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../imagenes/inte.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav {
+    background-color: var(--grisTransparente);
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10rem;
+}
+
+.nav ul {
+    display: flex;
+    gap: 10rem;
+    list-style-type: none;
+    text-align: center;
+}
+
+.nav a {
+    position: relative;
+    text-decoration: none;
+    color: var(--blanco);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: var(--negro);
+}
+
+.titulo-galeria {
+    grid-area: titulo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-galeria h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 7rem;
+    font-weight: 500;
+    color: var(--blanco);
+    padding: 2rem;
+}
+
+.icono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.2;
+    visibility: visible;
+}
+
+.icono p {
+    font-size: 3rem;
+    color: #8d8d8d;
+}
+
+.galeria-imagenes {
+    grid-area: imagenes;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+}
+
+.galeria-imagenes div {
+    width: 50%;
+    height: 20%;
+    border-radius: 4rem;
+    transition: 5s;
+    margin: 2rem;
+}
+
+.imagen {
+    width: 100%;
+    height: 100%;
+    border-radius: 4rem;
+}
+
+.footer-grid {
+    grid-area: footer;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .nav {
+        height: 10rem;
+        justify-content: center;
+        gap: 7rem;
+    }
+
+    .nav a {
+        font-size: 3rem;
+    }
+
+    .icono {
+        visibility: hidden;
+    }
+
+    .galeria-imagenes div {
+        width: 90%;
+        height: 40%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+
+    .nav {
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+        padding: 1rem 2rem;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+
+    .nav a {
+        font-size: 5rem;
+    }
+
+    .logo {
+        margin-top: 2rem;
+        width: 35rem;
+    }
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*CONTACTO*/
+
+#contacto {
+    display: grid;
+    grid-template-rows: 20% auto 15%;
+    grid-template-areas:
+        "navegacion"
+        "cuerpo"
+        "footer";
+    min-width: 100vh;
+}
+
+.contactanos {
+    grid-area: navegacion;
+    background-color: var(--grisTransparente);
+
+}
+
+.titulo-contacto {
+    height: 75%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-contacto h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--blanco);
+}
+
+.cuerpo-contacto {
+    grid-area: cuerpo;
+}
+
+.redes {
+    margin-top: 15rem;
+    height: 40rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.redes article div {
+    width: 25rem;
+    height: 25rem;
+    background-color: var(--blanco);
+    border-radius: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-contacto {
+    grid-area: footer;
+}
