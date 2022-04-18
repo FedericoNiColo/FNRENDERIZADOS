@@ -60,7 +60,7 @@ html {
 
 .cuerpo {
     grid-area: main;
-    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0)), url(/imagenes/RENDER\ 1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(/imagenes/RENDER\ 1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,7 +81,7 @@ html {
     justify-content: center;
     align-items: center;
     gap: 10rem;
-    
+
 }
 
 .navegacion-index li {
@@ -104,13 +104,13 @@ html {
     color: var(--negro);
 }
 
-.texto-submenu a{
+.texto-submenu a {
     text-align: center !important;
     width: 92%;
 }
 
 
-.seccion-logo{
+.seccion-logo {
     grid-area: logo;
 }
 
@@ -180,26 +180,6 @@ html {
         font-size: 3.4rem;
     }
 
-    .pie-pagina {
-        flex-direction: column;
-        align-items: center;
-        gap: 3rem;
-        height: 35rem;
-        padding: 1.5rem;
-    }
-
-    .iconos-footer {
-        flex-direction: column;
-    }
-
-    .parrafo-footer {
-        font-size: 2rem;
-    }
-
-    .logo-footer {
-        width: 15rem;
-    }
-
 }
 
 @media screen and (max-width: 480px) {
@@ -230,7 +210,7 @@ html {
         "cuerpo"
         "footer";
     gap: 5rem;
-    min-width: 100vh;
+    min-width: 100vw;
 }
 
 .encabezado-inicio {
@@ -244,6 +224,7 @@ html {
     grid-template-areas:
         "."
         "titulo";
+    width: 100vw;
 }
 
 .nav {
@@ -254,6 +235,7 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 10rem;
+    gap: 2rem;
 }
 
 .nav ul {
@@ -279,18 +261,23 @@ html {
 
 .cuerpo-inicio {
     grid-area: cuerpo;
+    width: 100vw;
 }
 
 .texto-imagen {
     grid-area: titulo;
     background-color: var(--grisTransparente);
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2rem;
 }
 
 .texto-imagen h1 {
     margin-top: 2rem;
     text-align: center;
-    font-size: 8rem;
+    font-size: 6rem;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--blanco);
@@ -298,10 +285,11 @@ html {
 
 .texto-imagen p {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 500;
     color: var(--blanco);
-    margin-top: 1rem;
+    margin-top: 2rem;
+    width: 80%;
 }
 
 .subtitulo {
@@ -318,8 +306,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
-    margin-bottom: 10rem;
+    gap: 4rem;
+    margin: 10rem;
 
 }
 
@@ -328,14 +316,14 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 22%;
-    height: 50rem;
+    width: 50rem;
+    height: 40rem;
     border-radius: 2rem;
 }
 
 .articulo img {
     width: 100%;
-    height: 80rem;
+    height: 75%;
     border-radius: 2rem;
     margin-bottom: 1rem;
     object-fit: cover;
@@ -352,9 +340,12 @@ html {
     font-size: 1.5rem;
     font-weight: 300;
     color: var(--negro);
+    width: 80%;
+    text-align: center;
 }
 
 .seccion-unico {
+    width: 100vh;
     margin-top: 15rem;
     display: flex;
     align-items: center;
@@ -378,7 +369,6 @@ html {
     font-size: 8rem;
     font-family: 'Mali';
     font-weight: 500;
-    margin-right: 15%;
     width: 20%;
 }
 
@@ -423,6 +413,7 @@ html {
 
 .iconos-footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -434,22 +425,65 @@ html {
     color: var(--blanco);
 }
 
+@media screen and (max-width: 1280px) {
+    .seccion-unico h2 {
+        font-size: 6rem;
+        width: 40%;
+    }
+}
+
+
+
 @media screen and (max-width: 768px) {
 
     .nav {
-        height: 10rem;
+        height: 12rem;
         justify-content: center;
-        gap: 7rem;
     }
 
     .nav a {
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+
+    .nav ul {
+        gap: 3rem;
     }
 
 }
 
 @media screen and (max-width: 630px) {
 
+    .logo {
+        width: 12rem;
+        padding: 1rem;
+    }
+
+    .nav {
+        height: 70%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+        padding: 1rem 2rem;
+    }
+
+    .nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+
+    .nav li {
+        padding: 1rem;
+        margin: 1rem;
+        width: 100%;
+        background-color: var(--grisTransparente-claro);
+    }
+
+    .nav a {
+        font-size: 4rem;
+        padding: 2rem;
+    }
 
     .pie-pagina {
         flex-direction: column;
@@ -468,38 +502,20 @@ html {
     }
 
     .logo-footer {
-        width: 15rem;
+        width: 5rem;
     }
 
-    .logo-enlace{
+    .logo-enlace {
         order: -1;
     }
 
 }
 
-@media screen and (max-width: 630px) {
 
-    .nav {
-        height: 100%;
-        flex-direction: column;
-        justify-content: center;
-        gap: 5rem;
-        padding: 1rem 2rem;
-    }
-
-    .nav ul {
-        flex-wrap: wrap;
-        gap: 3rem;
-    }
-
-    .nav a {
-        font-size: 5rem;
-    }
-}
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/*INTERIORES / EXTERIOR*/
+/*INTERIOR / EXTERIOR*/
 
 #interiores {
     display: grid;
@@ -507,8 +523,9 @@ html {
     grid-template-areas:
         "cuerpo"
         "footer";
-    min-width: 100vh;
+    width: 100vw;
     gap: 10rem;
+    overflow-x: hidden;
 }
 
 .cuerpo-galeria {
@@ -519,7 +536,7 @@ html {
         "encabezado"
         "titulo"
         "imagenes";
-    gap: 3em;
+    gap: 3rem;
 }
 
 .encabezado-galeria {
@@ -528,6 +545,7 @@ html {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100vw;
 }
 
 .titulo-galeria {
@@ -536,6 +554,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
 }
 
 .titulo-galeria h1 {
@@ -562,7 +581,7 @@ html {
 
 .galeria-imagenes {
     grid-area: imagenes;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -598,6 +617,19 @@ html {
 
 @media screen and (max-width: 768px) {
 
+    .cuerpo-galeria {
+        grid-template-rows: 10% 3% auto;
+    }
+
+    .titulo-galeria {
+        display: block;
+        height: 12rem;
+    }
+
+    .titulo-galeria h1 {
+        font-size: 5rem;
+    }
+
     .icono {
         visibility: hidden;
     }
@@ -610,10 +642,55 @@ html {
 
 @media screen and (max-width: 630px) {
 
-    .logo {
-        margin-top: 2rem;
-        width: 35rem;
+    #interiores {
+        grid-template-rows: 80% 10%;
     }
+
+    .cuerpo-galeria {
+        grid-area: cuerpo;
+        display: grid;
+        grid-template-rows: 100vh auto;
+        grid-template-areas:
+            "encabezado"
+            "titulo"
+            "imagenes";
+        gap: 3rem;
+    }
+
+    .encabezado-galeria {
+        grid-area: encabezado;
+    }
+
+    .titulo-galeria {
+        display: block;
+    }
+
+    .galeria-imagenes {
+        grid-area: imagenes;
+        justify-content: start;
+        gap: 2rem;
+    }
+
+    .titulo-galeria {
+        position: absolute;
+        top: 75%;
+    }
+
+    .titulo-galeria h1 {
+        font-size: 4rem;
+        color: var(--azulMarino);
+        font-weight: 700;
+    }
+
+    .galeria-imagenes div {
+        height: 8%;
+        border-radius: 2rem;
+    }
+
+    .imagen {
+        border-radius: 2rem;
+    }
+
 }
 
 
@@ -628,12 +705,14 @@ html {
         "navegacion"
         "cuerpo"
         "footer";
-    min-width: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .contactanos {
     grid-area: navegacion;
-    background-color:var(--blancoTransparente);
+    background-color: var(--blancoTransparente);
+    width: 100vw;
 }
 
 .titulo-contacto {
@@ -679,6 +758,7 @@ html {
     margin-top: 12rem;
     background-color: var(--grisTransparente-claro);
     height: 50rem;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -699,34 +779,34 @@ html {
     font-size: 2rem;
 }
 
-.ubicacion{
+.ubicacion {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
 }
 
-.mapa{
+.mapa {
     width: 50%;
 }
 
-.formulario{
+.formulario {
     background-color: var(--blancoTransparente);
     margin: auto;
     width: 40%;
     border-radius: 3rem;
-    padding: 5rem ;
+    padding: 5rem;
     margin-bottom: 10rem;
 }
 
-.formulario div{
+.formulario div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-label{
+label {
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
@@ -742,7 +822,7 @@ input, textarea {
     border-radius: 1rem;
 }
 
-.boton{
+.boton {
     border-radius: 1rem;
     width: 30%;
     height: 4rem;
@@ -762,28 +842,28 @@ input, textarea {
         gap: 7rem;
     }
 
-    .formulario{
+    .formulario {
         width: 60%;
         border-radius: 2rem;
-        padding: 4rem ;
+        padding: 4rem;
     }
 }
 
 @media screen and (max-width: 768px) {
 
     #contacto {
-        grid-template-rows: 20% auto 15%;
+        grid-template-rows: 15% auto 15%;
         grid-template-areas:
             "navegacion"
             "cuerpo"
             "footer";
-            min-height: 100vh;
-            width: 100%;
+        min-height: 100vh;
+        width: 100%;
     }
 
     .contactanos {
         grid-area: navegacion;
-
+        width: 100vw;
     }
 
     .cuerpo-contacto {
@@ -795,7 +875,13 @@ input, textarea {
     }
 
     .redes {
-        width: 100vh;
+        width: 100vw;
+    }
+
+    .redes article div {
+        width: 20rem;
+        height: 20rem;
+        margin: 2rem;
     }
 
     .recuadro-ubicacion {
@@ -804,41 +890,71 @@ input, textarea {
         flex-direction: column;
         justify-content: center;
         margin-bottom: 10rem;
-    } 
-    .mapa{
+    }
+
+    .mapa {
         width: 80%;
         height: 35rem;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 630px) {
 
-    .recuadro-ubicacion {
-        margin-top: 5rem;
-        height: 65rem;
-        flex-direction: column;
-        justify-content: center;
-        margin-bottom: 10rem;
-    } 
-
-    .mapa{
-        width: 80%;
-        height: 35rem;
+    #contacto {
+        grid-template-rows: 100vh auto 15%;
+        grid-template-areas:
+            "navegacion"
+            "cuerpo"
+            "footer";
+        min-height: 100vh;
+        width: 100%;
     }
-}
 
-@media screen and (max-width: 425px) {
+    .contactanos {
+        grid-area: navegacion;
+    }
+
+    .cuerpo-contacto {
+        grid-area: cuerpo;
+    }
+
+    .footer-contacto {
+        grid-area: footer;
+    }
+
+    .titulo-contacto h1 {
+        font-size: 5rem;
+    }
 
     .titulo-contacto {
         height: 20rem;
     }
 
     .redes {
-        height: 70rem;  
+        height: 75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .redes article div {
+        width: 20rem;
+        height: 20rem;
+        margin: 2rem;
+
     }
 
     .recuadro-ubicacion {
-        margin-top: 0;
+        margin-top: 5rem;
+    }
 
-    } 
+    .recuadro-ubicacion h2 {
+        font-size: 5.5rem;
+    }
+
+    .recuadro-ubicacion p {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
 }
