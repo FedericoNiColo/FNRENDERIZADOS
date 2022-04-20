@@ -1,0 +1,88 @@
+/*NAVEGACION PARA PAGINAS: INICIO, INTERIORES, EXTERIROES, CONTACTO.*/
+
+.nav {
+    background-color: $grisTransparente-claro;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10rem;
+    gap: 2rem;
+
+    .logo {
+        width: 7rem;
+    }
+
+    ul {
+        display: flex;
+        gap: 10rem;
+        list-style-type: none;
+        text-align: center;
+    }
+
+    a {
+        position: relative;
+        text-decoration: none;
+        color: var(--blanco);
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 300;
+
+        &:hover {
+            color: $negro;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        height: 12rem;
+        justify-content: center;
+
+        a {
+            font-size: 2rem;
+        }
+
+        ul {
+            gap: 3rem;
+        }
+
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .nav {
+        height: 60%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+        padding: 0;
+
+        .logo {
+            width: 12rem;
+            padding: 1rem;
+        }
+
+        a {
+            font-size: 2rem;
+            padding: 2rem;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100vw;
+            gap: 0;
+        }
+
+        li {
+            padding: 1rem;
+            margin: 1rem;
+            width: 100%;
+            background-color: $grisTransparente-claro;
+        }
+    }
+}
