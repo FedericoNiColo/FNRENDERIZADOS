@@ -26,8 +26,7 @@ html {
 #index {
   display: grid;
   grid-template-rows: 80% auto;
-  grid-template-areas: "main"
- "logo";
+  grid-template-areas: "main" "logo";
   min-height: 100vh; }
   #index .cuerpo {
     grid-area: main;
@@ -40,8 +39,7 @@ html {
     grid-template-rows: 5% auto;
     min-height: 100%;
     min-width: 100%;
-    grid-template-areas: "navegacion"
- "."; }
+    grid-template-areas: "navegacion" "."; }
     #index .cuerpo .navegacion-index {
       grid-area: navegacion;
       height: 100%;
@@ -229,8 +227,7 @@ html {
 #interiores {
   display: grid;
   grid-template-rows: 110% 10%;
-  grid-template-areas: "cuerpo"
- "footer";
+  grid-template-areas: "cuerpo" "footer";
   width: 100vw;
   gap: 10rem;
   overflow-x: hidden; }
@@ -238,9 +235,7 @@ html {
     grid-area: cuerpo;
     display: grid;
     grid-template-rows: 10% 5% auto;
-    grid-template-areas: "encabezado"
- "titulo"
- "imagenes";
+    grid-template-areas: "encabezado" "titulo" "imagenes";
     gap: 3rem; }
     #interiores .cuerpo-galeria .encabezado-galeria {
       grid-area: encabezado;
@@ -320,9 +315,7 @@ html {
       grid-area: cuerpo;
       display: grid;
       grid-template-rows: 100vh auto;
-      grid-template-areas: "encabezado"
- "titulo"
- "imagenes";
+      grid-template-areas: "encabezado" "titulo" "imagenes";
       gap: 3rem; }
       #interiores .cuerpo-galeria .encabezado-galeria {
         grid-area: encabezado; }
@@ -348,9 +341,7 @@ html {
 #contacto {
   display: grid;
   grid-template-rows: 15% auto 15%;
-  grid-template-areas: "navegacion"
- "cuerpo"
- "footer";
+  grid-template-areas: "navegacion" "cuerpo" "footer";
   width: 100vw;
   overflow-x: hidden; }
   #contacto .contactanos {
@@ -458,9 +449,7 @@ html {
 @media screen and (max-width: 768px) {
   #contacto {
     grid-template-rows: 15% auto 15%;
-    grid-template-areas: "navegacion"
- "cuerpo"
- "footer";
+    grid-template-areas: "navegacion" "cuerpo" "footer";
     min-height: 100vh;
     width: 100%; }
     #contacto .contactanos {
@@ -488,9 +477,7 @@ html {
 @media screen and (max-width: 630px) {
   #contacto {
     grid-template-rows: 100vh auto 15%;
-    grid-template-areas: "navegacion"
- "cuerpo"
- "footer";
+    grid-template-areas: "navegacion" "cuerpo" "footer";
     min-height: 100vh;
     width: 100%; }
     #contacto .contactanos {
