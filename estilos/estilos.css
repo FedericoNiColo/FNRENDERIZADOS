@@ -27,7 +27,7 @@ html {
   display: grid;
   grid-template-rows: 80% auto;
   grid-template-areas: "main" "logo";
-  min-height: 100vh; }
+  height: 100vh; }
   #index .cuerpo {
     grid-area: main;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(../imagenes/RENDER-PRINCIPAL-OPTIMIZADO.jpg);
@@ -106,21 +106,23 @@ html {
     width: 14rem; } }
 
 @media screen and (max-width: 630px) {
-  #index .cuerpo {
-    grid-template-rows: 15% 50% 25%; }
-    #index .cuerpo .navegacion-index {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      background-color: rgba(37, 36, 36, 0.4); }
-      #index .cuerpo .navegacion-index a {
-        font-size: 2.5; }
-  #index .seccion-logo .contenido-index img {
-    width: 5rem; }
-  #index .seccion-logo .contenido-index h1 {
-    font-size: 1.5rem;
-    width: 11rem; } }
+  #index {
+    grid-template-rows: 80% 20%; }
+    #index .cuerpo {
+      grid-template-rows: 15% 50% 25%; }
+      #index .cuerpo .navegacion-index {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        background-color: rgba(37, 36, 36, 0.4); }
+        #index .cuerpo .navegacion-index a {
+          font-size: 2.5; }
+    #index .seccion-logo .contenido-index img {
+      width: 5rem; }
+    #index .seccion-logo .contenido-index h1 {
+      font-size: 1.5rem;
+      width: 11rem; } }
 
 @media screen and (max-width: 480px) {
   #index .cuerpo {
@@ -244,29 +246,44 @@ html {
       align-items: center;
       margin-bottom: 20rem; }
       #inicio .cuerpo-inicio .recuadro-horizontal h2 {
-        font-size: 7rem;
+        font-size: 5rem;
         color: #68829E;
         text-align: center;
         text-transform: uppercase; }
       #inicio .cuerpo-inicio .recuadro-horizontal p {
         padding: 1rem;
         text-align: center;
-        font-size: 2rem; }
+        font-size: 1.5rem; }
 
 @media screen and (max-width: 1440px) {
-  #inicio .cuerpo-inicio .seccion-unico {
-    height: 40rem; }
-    #inicio .cuerpo-inicio .seccion-unico img {
-      height: 38rem; }
-    #inicio .cuerpo-inicio .seccion-unico h2 {
-      font-size: 6rem;
-      width: 40%; } }
-
-@media screen and (max-width: 1280px) {
   #inicio {
     grid-template-rows: 20% auto 15%; }
     #inicio .encabezado-inicio {
       grid-template-rows: 60% auto; }
+    #inicio .cuerpo-inicio .seccion-unico {
+      height: 40rem; }
+      #inicio .cuerpo-inicio .seccion-unico img {
+        height: 38rem; }
+      #inicio .cuerpo-inicio .seccion-unico h2 {
+        font-size: 6rem;
+        width: 40%; } }
+
+@media screen and (max-width: 1280px) {
+  #inicio {
+    grid-template-rows: 14% auto 15%;
+    gap: 0; }
+    #inicio .encabezado-inicio {
+      grid-template-rows: 63% auto; }
+      #inicio .encabezado-inicio .texto-imagen {
+        height: 12rem; }
+        #inicio .encabezado-inicio .texto-imagen h1 {
+          font-size: 4rem;
+          margin-top: 0.5rem; }
+        #inicio .encabezado-inicio .texto-imagen p {
+          margin-top: 0.5rem;
+          font-size: 1.5rem; }
+    #inicio .cuerpo-inicio .subtitulo {
+      font-size: 3.5rem; }
     #inicio .cuerpo-inicio .proceso-trabajo .articulo {
       height: 30rem;
       border-radius: 1.5rem; }
@@ -289,30 +306,38 @@ html {
 @media screen and (max-width: 768px) {
   #inicio {
     display: grid;
-    grid-template-rows: 23% auto 15%;
+    grid-template-rows: 14% auto 15%;
     grid-template-areas: "encabezado" "cuerpo" "footer";
-    gap: 3rem;
+    gap: 1rem;
     min-width: 100vw; }
     #inicio .encabezado-inicio {
-      grid-template-rows: 62% auto;
+      grid-template-rows: 65% auto;
       grid-template-areas: "." "titulo"; }
-      #inicio .encabezado-inicio .texto-imagen h1 {
-        grid-area: titulo;
-        font-size: 4rem; }
-      #inicio .encabezado-inicio .texto-imagen p {
-        text-align: center;
-        font-size: 1.5rem;
-        width: 50%;
-        margin-top: 1rem; }
+      #inicio .encabezado-inicio .texto-imagen {
+        margin-top: 0;
+        height: 10rem; }
+        #inicio .encabezado-inicio .texto-imagen h1 {
+          grid-area: titulo;
+          font-size: 3.4rem;
+          margin-top: 0rem; }
+        #inicio .encabezado-inicio .texto-imagen p {
+          text-align: center;
+          font-size: 1rem;
+          width: 50%;
+          margin-top: 0rem; }
     #inicio .cuerpo-inicio {
       grid-area: cuerpo; }
       #inicio .cuerpo-inicio .subtitulo {
         margin-top: 2rem;
-        font-size: 3rem;
+        font-size: 2.8rem;
         margin-bottom: 2rem; }
       #inicio .cuerpo-inicio .proceso-trabajo {
         gap: 4rem;
         margin: 3rem; }
+        #inicio .cuerpo-inicio .proceso-trabajo .articulo h4 {
+          font-size: 1.7rem; }
+        #inicio .cuerpo-inicio .proceso-trabajo .articulo p {
+          font-size: 0.7rem; }
       #inicio .cuerpo-inicio .seccion-unico {
         margin-top: 7rem;
         justify-content: center;
@@ -351,20 +376,22 @@ html {
     grid-template-areas: "encabezado" "cuerpo" "footer";
     gap: 3rem; }
     #inicio .encabezado-inicio {
-      grid-template-rows: 80% auto;
+      grid-template-rows: 82% auto;
       grid-template-areas: "." "titulo"; }
       #inicio .encabezado-inicio .texto-imagen {
         width: 100vw; }
         #inicio .encabezado-inicio .texto-imagen h1 {
           grid-area: titulo;
-          font-size: 3rem; }
+          font-size: 2.2rem;
+          margin-top: 0.5rem; }
         #inicio .encabezado-inicio .texto-imagen p {
-          font-size: 1rem;
-          width: 80%; }
+          font-size: 0.9rem;
+          width: 80%;
+          margin-top: 0.2rem; }
     #inicio .cuerpo-inicio {
       grid-area: cuerpo; }
       #inicio .cuerpo-inicio .subtitulo {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-bottom: 2rem; }
       #inicio .cuerpo-inicio .proceso-trabajo {
         gap: 3rem;
@@ -442,27 +469,39 @@ html {
     .nav a:hover {
       color: #000000; }
 
+@media screen and (max-width: 1280px) {
+  .nav {
+    height: 4rem; }
+    .nav a {
+      font-size: 1.5rem; }
+    .nav ul {
+      gap: 3rem; }
+    .nav .logo {
+      width: 5rem; } }
+
 @media screen and (max-width: 768px) {
   .nav {
-    height: 12rem;
+    height: 3rem;
     justify-content: center; }
     .nav a {
-      font-size: 2rem; }
+      font-size: 1.5rem; }
     .nav ul {
-      gap: 3rem; } }
+      gap: 3rem; }
+    .nav .logo {
+      width: 4rem; } }
 
 @media screen and (max-width: 630px) {
   .nav {
-    height: 60%;
+    height: 75%;
     flex-direction: column;
     justify-content: center;
     gap: 0;
     padding: 0; }
     .nav .logo {
-      width: 12rem;
+      width: 8rem;
       padding: 1rem; }
     .nav a {
-      font-size: 2rem;
+      font-size: 1rem;
       padding: 2rem; }
     .nav ul {
       display: flex;
@@ -506,7 +545,7 @@ html {
     .pie-pagina .iconos-footer {
       flex-direction: column; }
     .pie-pagina .parrafo-footer {
-      font-size: 2rem; }
+      font-size: 1.2rem; }
     .pie-pagina .logo-footer {
       width: 5rem; }
     .pie-pagina .logo-enlace {

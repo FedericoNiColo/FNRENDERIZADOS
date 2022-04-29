@@ -153,7 +153,7 @@
             margin-bottom: 20rem;
 
             h2 {
-                font-size: 7rem;
+                font-size: 5rem;
                 color: $azulMarino;
                 text-align: center;
                 text-transform: uppercase;
@@ -162,7 +162,7 @@
             p {
                 padding: 1rem;
                 text-align: center;
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
         }
     }
@@ -172,7 +172,15 @@
 @media screen and (max-width: 1440px) {
 
     #inicio {
+
+        grid-template-rows: 20% auto 15%;
+
+        .encabezado-inicio {
+            grid-template-rows: 60% auto;
+        }
+
         .cuerpo-inicio {
+
             .seccion-unico {
                 height: 40rem;
 
@@ -193,13 +201,33 @@
 
     #inicio {
 
-        grid-template-rows: 20% auto 15%;
+        grid-template-rows: 14% auto 15%;
+        gap: 0;
 
         .encabezado-inicio {
-            grid-template-rows: 60% auto;
+            grid-template-rows: 63% auto;
+
+            .texto-imagen {
+                height: 12rem;
+
+                h1 {
+                    font-size: 4rem;
+                    margin-top: 0.5rem;
+                }
+
+                p {
+                    margin-top: 0.5rem;
+                    font-size: 1.5rem;
+                }
+            }
         }
 
         .cuerpo-inicio {
+
+            .subtitulo {
+                font-size: 3.5rem;
+            }
+
             .proceso-trabajo {
 
                 .articulo {
@@ -240,32 +268,35 @@
 
     #inicio {
         display: grid;
-        grid-template-rows: 23% auto 15%;
+        grid-template-rows: 14% auto 15%;
         grid-template-areas:
             "encabezado"
             "cuerpo"
             "footer";
-        gap: 3rem;
+        gap: 1rem;
         min-width: 100vw;
 
         .encabezado-inicio {
-            grid-template-rows: 62% auto;
+            grid-template-rows: 65% auto;
             grid-template-areas:
                 "."
                 "titulo";
 
             .texto-imagen {
+                margin-top: 0;
+                height: 10rem;
 
                 h1 {
                     grid-area: titulo;
-                    font-size: 4rem;
+                    font-size: 3.4rem;
+                    margin-top: 0rem;
                 }
 
                 p {
                     text-align: center;
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                     width: 50%;
-                    margin-top: 1rem;
+                    margin-top: 0rem;
                 }
             }
         }
@@ -275,14 +306,25 @@
 
             .subtitulo {
                 margin-top: 2rem;
-                font-size: 3rem;
+                font-size: 2.8rem;
                 margin-bottom: 2rem;
             }
 
             .proceso-trabajo {
                 gap: 4rem;
                 margin: 3rem;
+
+                .articulo {
+                    h4 {
+                        font-size: 1.7rem;
+                    }
+
+                    p {
+                        font-size: 0.7rem;
+                    }
+                }
             }
+
 
             .seccion-unico {
                 margin-top: 7rem;
@@ -343,7 +385,7 @@
         gap: 3rem;
 
         .encabezado-inicio {
-            grid-template-rows: 80% auto;
+            grid-template-rows: 82% auto;
             grid-template-areas:
                 "."
                 "titulo";
@@ -353,12 +395,14 @@
 
                 h1 {
                     grid-area: titulo;
-                    font-size: 3rem;
+                    font-size: 2.2rem;
+                    margin-top: 0.5rem;
                 }
 
                 p {
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                     width: 80%;
+                    margin-top: 0.2rem;
                 }
             }
         }
@@ -367,7 +411,7 @@
             grid-area: cuerpo;
 
             .subtitulo {
-                font-size: 3rem;
+                font-size: 2.5rem;
                 margin-bottom: 2rem;
             }
 

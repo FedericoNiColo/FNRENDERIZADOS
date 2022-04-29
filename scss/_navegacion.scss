@@ -36,37 +36,58 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
     .nav {
-        height: 12rem;
-        justify-content: center;
+        height: 4rem;
 
         a {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
 
         ul {
             gap: 3rem;
         }
 
+        .logo {
+            width: 5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        height: 3rem;
+        justify-content: center;
+
+        a {
+            font-size: 1.5rem;
+        }
+
+        ul {
+            gap: 3rem;
+        }
+
+        .logo {
+            width: 4rem;
+        }
     }
 }
 
 @media screen and (max-width: 630px) {
     .nav {
-        height: 60%;
+        height: 75%;
         flex-direction: column;
         justify-content: center;
         gap: 0;
         padding: 0;
 
         .logo {
-            width: 12rem;
+            width: 8rem;
             padding: 1rem;
         }
 
         a {
-            font-size: 2rem;
+            font-size: 1rem;
             padding: 2rem;
         }
 
