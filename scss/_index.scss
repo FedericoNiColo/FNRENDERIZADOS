@@ -15,8 +15,8 @@
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 5% auto;
-        min-height: 100%;
-        min-width: 100%;
+        max-height: 100vh;
+        max-width: 100%;
         grid-template-areas:
             "navegacion"
             ".";
@@ -94,12 +94,12 @@
 
             .contenido-index {
                 img {
-                    width: 14rem;
+                    width: 12rem;
                 }
 
                 h1 {
-                    font-size: 4.5rem;
-                    width: 32rem;
+                    font-size: 4rem;
+                    width: 28rem;
                 }
             }
         }
