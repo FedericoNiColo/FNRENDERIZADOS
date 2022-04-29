@@ -391,11 +391,9 @@ html {
     .proceso-trabajo {
         gap: 4rem;
         margin: 3rem;
-
     }
 
     .seccion-unico {
-
         margin-top: 7rem;
         justify-content: center;
         width: 100%;
@@ -512,7 +510,6 @@ html {
 
     .texto-imagen p {
         font-size: 1rem;
-
         width: 80%;
     }
 

@@ -13,7 +13,7 @@
     .cuerpo-galeria {
         grid-area: cuerpo;
         display: grid;
-        grid-template-rows: 10% 5% auto;
+        grid-template-rows: 5% 2% auto;
         grid-template-areas:
             "encabezado"
             "titulo"
@@ -36,6 +36,7 @@
             justify-content: center;
             align-items: center;
             width: 100vw;
+            height: 20rem;
 
             h1 {
                 text-transform: uppercase;
@@ -65,13 +66,13 @@
             width: 100vw;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            gap: 7rem;
+            gap: 4rem;
 
             div {
                 width: 50%;
-                height: 20%;
+                height: 9%;
                 border-radius: 4rem;
                 transition: 5s;
                 margin: 2rem;
@@ -98,11 +99,21 @@
             .galeria-imagenes {
                 div {
                     &:hover {
-                        width: 80%;
-                        height: 25%;
+                        width: 70%;
+                        height: 12%;
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    #interiores {
+
+        .cuerpo-galeria {
+            grid-template-rows: 5% 4% auto;
+
         }
     }
 }
@@ -111,7 +122,7 @@
 
     #interiores {
         .cuerpo-galeria {
-            grid-template-rows: 10% 3% auto;
+            grid-template-rows: 5% 2% auto;
 
             .titulo-galeria {
                 display: block;
@@ -136,8 +147,8 @@
 
 @media screen and (max-width: 630px) {
     #interiores {
-        grid-template-rows: 87% 20%;
-        gap: 0;
+        grid-template-rows: 100% 20%;
+        gap: 5rem;
 
         .cuerpo-galeria {
             grid-area: cuerpo;
@@ -145,7 +156,6 @@
             grid-template-rows: 100vh auto;
             grid-template-areas:
                 "encabezado"
-                "titulo"
                 "imagenes";
             gap: 3rem;
 
@@ -159,7 +169,7 @@
                 top: 65%;
 
                 h1 {
-                    font-size: 5rem;
+                    font-size: 4.5rem;
                     color: $azulMarino;
                     font-weight: 700;
                 }
