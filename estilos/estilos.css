@@ -46,7 +46,8 @@ html {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 10rem; }
+      gap: 10rem;
+      padding: 0; }
       #index .cuerpo .navegacion-index li {
         list-style-type: none;
         width: 25rem;
@@ -74,31 +75,35 @@ html {
       justify-content: center;
       align-items: center; }
       #index .seccion-logo .contenido-index h1 {
-        font-size: 5rem;
-        width: 38rem;
+        font-size: 4.5rem;
+        width: 33rem;
         text-transform: uppercase;
         color: #ffffff; }
       #index .seccion-logo .contenido-index img {
-        width: 20rem;
+        width: 15rem;
         padding: 1rem; }
 
 @media screen and (max-width: 1280px) {
   #index .cuerpo .navegacion-index {
     gap: 0; }
+    #index .cuerpo .navegacion-index li {
+      width: 25rem; }
+    #index .cuerpo .navegacion-index a {
+      font-size: 1rem; }
   #index .seccion-logo .contenido-index img {
-    width: 12rem; }
+    width: 8rem; }
   #index .seccion-logo .contenido-index h1 {
-    font-size: 4rem;
-    width: 28rem; } }
+    font-size: 2.5rem;
+    width: 18rem; } }
 
 @media screen and (max-width: 768px) {
   #index .cuerpo .navegacion-index {
     gap: 0; }
   #index .seccion-logo .contenido-index img {
-    width: 13rem; }
+    width: 7rem; }
   #index .seccion-logo .contenido-index h1 {
-    font-size: 4rem;
-    width: 28rem; } }
+    font-size: 2rem;
+    width: 14rem; } }
 
 @media screen and (max-width: 630px) {
   #index .cuerpo {
@@ -112,18 +117,14 @@ html {
       #index .cuerpo .navegacion-index a {
         font-size: 2.5; }
   #index .seccion-logo .contenido-index img {
-    width: 15rem; }
+    width: 5rem; }
   #index .seccion-logo .contenido-index h1 {
-    font-size: 3.4rem; } }
+    font-size: 1.5rem;
+    width: 11rem; } }
 
 @media screen and (max-width: 480px) {
   #index .cuerpo {
-    grid-template-rows: 22% 40% 25%; }
-  #index .seccion-logo .contenido-index img {
-    width: 8rem; }
-  #index .seccion-logo .contenido-index h1 {
-    width: 18rem;
-    font-size: 2.5rem; } }
+    grid-template-rows: 30% 40% 25%; } }
 
 /* PAGINA DE INICIO */
 #inicio {

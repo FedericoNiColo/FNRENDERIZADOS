@@ -28,6 +28,7 @@
             justify-content: center;
             align-items: center;
             gap: 10rem;
+            padding: 0;
 
             li {
                 list-style-type: none;
@@ -68,14 +69,14 @@
             align-items: center;
 
             h1 {
-                font-size: 5rem;
-                width: 38rem;
+                font-size: 4.5rem;
+                width: 33rem;
                 text-transform: uppercase;
                 color: $blanco;
             }
 
             img {
-                width: 20rem;
+                width: 15rem;
                 padding: 1rem;
             }
         }
@@ -87,6 +88,14 @@
         .cuerpo {
             .navegacion-index {
                 gap: 0;
+
+                li {
+                    width: 25rem;
+                }
+
+                a {
+                    font-size: 1rem;
+                }
             }
         }
 
@@ -94,12 +103,12 @@
 
             .contenido-index {
                 img {
-                    width: 12rem;
+                    width: 8rem;
                 }
 
                 h1 {
-                    font-size: 4rem;
-                    width: 28rem;
+                    font-size: 2.5rem;
+                    width: 18rem;
                 }
             }
         }
@@ -118,12 +127,12 @@
 
             .contenido-index {
                 img {
-                    width: 13rem;
+                    width: 7rem;
                 }
 
                 h1 {
-                    font-size: 4rem;
-                    width: 28rem;
+                    font-size: 2rem;
+                    width: 14rem;
                 }
             }
         }
@@ -153,11 +162,12 @@
 
             .contenido-index {
                 img {
-                    width: 15rem;
+                    width: 5rem;
                 }
 
                 h1 {
-                    font-size: 3.4rem;
+                    font-size: 1.5rem;
+                    width: 11rem;
                 }
             }
         }
@@ -167,21 +177,7 @@
 @media screen and (max-width: 480px) {
     #index {
         .cuerpo {
-            grid-template-rows: 22% 40% 25%
-        }
-
-        .seccion-logo {
-            .contenido-index {
-
-                img {
-                    width: 8rem;
-                }
-
-                h1 {
-                    width: 18rem;
-                    font-size: 2.5rem;
-                }
-            }
+            grid-template-rows: 30% 40% 25%
         }
     }
 }
