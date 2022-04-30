@@ -377,7 +377,7 @@
 @media screen and (max-width: 630px) {
 
     #inicio {
-        grid-template-rows: 100vh auto 15%;
+        grid-template-rows: 70vh auto 15%;
         grid-template-areas:
             "encabezado"
             "cuerpo"
@@ -385,7 +385,7 @@
         gap: 3rem;
 
         .encabezado-inicio {
-            grid-template-rows: 89.2% auto;
+            grid-template-rows: 80% auto;
             grid-template-areas:
                 "."
                 "titulo";

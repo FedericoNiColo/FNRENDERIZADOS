@@ -119,10 +119,10 @@ html {
         #index .cuerpo .navegacion-index a {
           font-size: 1.5rem; }
     #index .seccion-logo .contenido-index img {
-      width: 9rem; }
+      width: 7rem; }
     #index .seccion-logo .contenido-index h1 {
-      font-size: 3rem;
-      width: 21rem; } }
+      font-size: 2rem;
+      width: 16rem; } }
 
 @media screen and (max-width: 480px) {
   #index .cuerpo {
@@ -372,11 +372,11 @@ html {
 
 @media screen and (max-width: 630px) {
   #inicio {
-    grid-template-rows: 100vh auto 15%;
+    grid-template-rows: 70vh auto 15%;
     grid-template-areas: "encabezado" "cuerpo" "footer";
     gap: 3rem; }
     #inicio .encabezado-inicio {
-      grid-template-rows: 89.2% auto;
+      grid-template-rows: 80% auto;
       grid-template-areas: "." "titulo"; }
       #inicio .encabezado-inicio .texto-imagen {
         width: 100vw; }
@@ -492,7 +492,7 @@ html {
 
 @media screen and (max-width: 630px) {
   .nav {
-    height: 35%;
+    height: 68%;
     flex-direction: column;
     justify-content: center;
     gap: 0;
