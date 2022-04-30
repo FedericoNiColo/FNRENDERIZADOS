@@ -145,16 +145,21 @@
         .cuerpo {
             grid-template-rows: 15% 50% 25%;
 
-
-            .navegacion-index {
-                flex-direction: column;
+            .navegacion-index {  
                 justify-content: center;
                 align-items: center;
-                gap: 0.5rem;
-                background-color: $grisTransparente-claro;
-
+                gap: 0.7rem;
+                width: 100vw;
                 a {
                     font-size: 1.5rem;
+                }
+
+                li {
+                    width: 10rem;
+                }
+
+                .texto-submenu a {
+                    width: 80%;
                 }
             }
         }

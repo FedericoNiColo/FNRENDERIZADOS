@@ -160,7 +160,7 @@
         .cuerpo-galeria {
             grid-area: cuerpo;
             display: grid;
-            grid-template-rows: 100vh auto;
+            grid-template-rows: 65vh auto;
             grid-template-areas:
                 "encabezado"
                 "imagenes";
@@ -173,7 +173,7 @@
             .titulo-galeria {
                 display: block;
                 position: absolute;
-                top: 65%;
+                top: 45%;
 
                 h1 {
                     font-size: 4.5rem;
@@ -197,40 +197,5 @@
                 }
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

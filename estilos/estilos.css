@@ -111,13 +111,16 @@ html {
     #index .cuerpo {
       grid-template-rows: 15% 50% 25%; }
       #index .cuerpo .navegacion-index {
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 0.5rem;
-        background-color: rgba(37, 36, 36, 0.4); }
+        gap: 0.7rem;
+        width: 100vw; }
         #index .cuerpo .navegacion-index a {
           font-size: 1.5rem; }
+        #index .cuerpo .navegacion-index li {
+          width: 10rem; }
+        #index .cuerpo .navegacion-index .texto-submenu a {
+          width: 80%; }
     #index .seccion-logo .contenido-index img {
       width: 7rem; }
     #index .seccion-logo .contenido-index h1 {
@@ -652,7 +655,7 @@ html {
     #interiores .cuerpo-galeria {
       grid-area: cuerpo;
       display: grid;
-      grid-template-rows: 100vh auto;
+      grid-template-rows: 65vh auto;
       grid-template-areas: "encabezado" "imagenes";
       gap: 3rem; }
       #interiores .cuerpo-galeria .encabezado-galeria {
@@ -660,7 +663,7 @@ html {
       #interiores .cuerpo-galeria .titulo-galeria {
         display: block;
         position: absolute;
-        top: 65%; }
+        top: 45%; }
         #interiores .cuerpo-galeria .titulo-galeria h1 {
           font-size: 4.5rem;
           color: #68829E;
