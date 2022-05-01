@@ -13,13 +13,12 @@
     .cuerpo-galeria {
         grid-area: cuerpo;
         display: grid;
-        grid-template-rows: 5% 2% auto;
+        grid-template-rows: 5% 2.3% auto;
         grid-template-areas:
             "encabezado"
             "titulo"
             "imagenes";
-        gap: 3rem;
-
+        
         .encabezado-galeria {
             grid-area: encabezado;
             background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../imagenes/inte.webp);
@@ -112,21 +111,29 @@
     #interiores {
 
         .cuerpo-galeria {
-            grid-template-rows: 5% 4% auto;
+            grid-template-rows: 5% 2.5% auto;
 
+            .titulo-galeria {
+                    height: 15rem;
+                    h1 {
+                        font-size: 5.5rem;
+                        padding: 0;
+                    }
+                }
+            }
         }
     }
-}
+
 
 @media screen and (max-width: 768px) {
 
     #interiores {
         .cuerpo-galeria {
-            grid-template-rows: 5% 2% auto;
-
+            grid-template-rows: 5% 1.5% auto;
+            
             .titulo-galeria {
                 display: block;
-                height: 12rem;
+                margin-top: 1rem;
 
                 h1 {
                     font-size: 5rem;
@@ -153,7 +160,7 @@
         .cuerpo-galeria {
             grid-area: cuerpo;
             display: grid;
-            grid-template-rows: 100vh auto;
+            grid-template-rows: 65vh auto;
             grid-template-areas:
                 "encabezado"
                 "imagenes";
@@ -166,7 +173,7 @@
             .titulo-galeria {
                 display: block;
                 position: absolute;
-                top: 65%;
+                top: 48%;
 
                 h1 {
                     font-size: 4.5rem;
@@ -190,40 +197,5 @@
                 }
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
