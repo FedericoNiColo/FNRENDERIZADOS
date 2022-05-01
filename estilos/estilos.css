@@ -26,7 +26,8 @@ html {
 #index {
   display: grid;
   grid-template-rows: 80% auto;
-  grid-template-areas: "main" "logo";
+  grid-template-areas: "main"
+ "logo";
   height: 100vh; }
   #index .cuerpo {
     grid-area: main;
@@ -39,7 +40,8 @@ html {
     grid-template-rows: 5% auto;
     max-height: 100vh;
     max-width: 100%;
-    grid-template-areas: "navegacion" "."; }
+    grid-template-areas: "navegacion"
+ "."; }
     #index .cuerpo .navegacion-index {
       grid-area: navegacion;
       height: 100%;
@@ -103,7 +105,7 @@ html {
     width: 7rem; }
   #index .seccion-logo .contenido-index h1 {
     font-size: 2rem;
-    width: 14rem; } }
+    width: 15rem; } }
 
 @media screen and (max-width: 630px) {
   #index {
@@ -135,7 +137,9 @@ html {
 #inicio {
   display: grid;
   grid-template-rows: 30% auto 15%;
-  grid-template-areas: "encabezado" "cuerpo" "footer";
+  grid-template-areas: "encabezado"
+ "cuerpo"
+ "footer";
   gap: 5rem;
   min-width: 100vw;
   overflow-x: hidden; }
@@ -147,7 +151,8 @@ html {
     background-size: cover;
     display: grid;
     grid-template-rows: 75% auto;
-    grid-template-areas: "." "titulo";
+    grid-template-areas: "."
+ "titulo";
     width: 100vw; }
     #inicio .encabezado-inicio .texto-imagen {
       grid-area: titulo;
@@ -310,12 +315,15 @@ html {
   #inicio {
     display: grid;
     grid-template-rows: 14% auto 15%;
-    grid-template-areas: "encabezado" "cuerpo" "footer";
+    grid-template-areas: "encabezado"
+ "cuerpo"
+ "footer";
     gap: 1rem;
     min-width: 100vw; }
     #inicio .encabezado-inicio {
       grid-template-rows: 65% auto;
-      grid-template-areas: "." "titulo"; }
+      grid-template-areas: "."
+ "titulo"; }
       #inicio .encabezado-inicio .texto-imagen {
         margin-top: 0;
         height: 10rem; }
@@ -376,11 +384,14 @@ html {
 @media screen and (max-width: 630px) {
   #inicio {
     grid-template-rows: 70vh auto 15%;
-    grid-template-areas: "encabezado" "cuerpo" "footer";
+    grid-template-areas: "encabezado"
+ "cuerpo"
+ "footer";
     gap: 3rem; }
     #inicio .encabezado-inicio {
       grid-template-rows: 80% auto;
-      grid-template-areas: "." "titulo"; }
+      grid-template-areas: "."
+ "titulo"; }
       #inicio .encabezado-inicio .texto-imagen {
         width: 100vw; }
         #inicio .encabezado-inicio .texto-imagen h1 {
@@ -559,7 +570,8 @@ html {
 #interiores {
   display: grid;
   grid-template-rows: 110% 10%;
-  grid-template-areas: "cuerpo" "footer";
+  grid-template-areas: "cuerpo"
+ "footer";
   width: 100vw;
   gap: 10rem;
   overflow-x: hidden; }
@@ -567,7 +579,9 @@ html {
     grid-area: cuerpo;
     display: grid;
     grid-template-rows: 5% 2.3% auto;
-    grid-template-areas: "encabezado" "titulo" "imagenes"; }
+    grid-template-areas: "encabezado"
+ "titulo"
+ "imagenes"; }
     #interiores .cuerpo-galeria .encabezado-galeria {
       grid-area: encabezado;
       background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../imagenes/inte.webp);
@@ -656,14 +670,15 @@ html {
       grid-area: cuerpo;
       display: grid;
       grid-template-rows: 65vh auto;
-      grid-template-areas: "encabezado" "imagenes";
+      grid-template-areas: "encabezado"
+ "imagenes";
       gap: 3rem; }
       #interiores .cuerpo-galeria .encabezado-galeria {
         grid-area: encabezado; }
       #interiores .cuerpo-galeria .titulo-galeria {
         display: block;
         position: absolute;
-        top: 45%; }
+        top: 48%; }
         #interiores .cuerpo-galeria .titulo-galeria h1 {
           font-size: 4.5rem;
           color: #68829E;
@@ -682,7 +697,9 @@ html {
 #contacto {
   display: grid;
   grid-template-rows: 15% auto 15%;
-  grid-template-areas: "navegacion" "cuerpo" "footer";
+  grid-template-areas: "navegacion"
+ "cuerpo"
+ "footer";
   width: 100vw;
   overflow-x: hidden; }
   #contacto .contactanos {
@@ -789,7 +806,9 @@ html {
 @media screen and (max-width: 768px) {
   #contacto {
     grid-template-rows: 15% auto 15%;
-    grid-template-areas: "navegacion" "cuerpo" "footer";
+    grid-template-areas: "navegacion"
+ "cuerpo"
+ "footer";
     min-height: 100vh;
     width: 100%; }
     #contacto .contactanos {
@@ -835,7 +854,9 @@ html {
 @media screen and (max-width: 630px) {
   #contacto {
     grid-template-rows: 100vh auto 15%;
-    grid-template-areas: "navegacion" "cuerpo" "footer";
+    grid-template-areas: "navegacion"
+ "cuerpo"
+ "footer";
     min-height: 100vh;
     width: 100%; }
     #contacto .contactanos {
